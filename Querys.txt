@@ -1,0 +1,14 @@
+create table peliculas(
+id int not null,
+nombre varchar (100) not null,
+primary key (id));
+
+create table rentaPelicula(
+idRenta int not null,
+fechaRenta date not null,
+idPelicula int,
+primary key (idRenta),
+foreign key (idRenta) references peliculas(id));
+
+insert into peliculas values (1, 'El expreso Polar');
+insert into peliculas values (2, 'Avengers');
